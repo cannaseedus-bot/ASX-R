@@ -1,5 +1,3 @@
----
-
 # ASX-R — JSON Runtime Axiom
 
 **Document:** `JSON_RUNTIME_AXIOM.md`
