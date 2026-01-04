@@ -216,6 +216,3 @@ I recommend putting this near the top of the README:
 > **ASX-R is a runtime language.
 > Implementations execute it; they do not define it.**
 
-That one line will save you years of argument.
-
----
