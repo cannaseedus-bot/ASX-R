@@ -1,11 +1,3 @@
-# ASX-R
-
-Here is a **clean, sharp, authoritative `README.md`** drafted exactly for a **runtime-language repository**, not an app or framework.
-
-You can paste this verbatim as the root README of the ASX-R GitHub repo.
-
----
-
 # ASX-R — The Authoritative Runtime Language
 
 **ASX-R** is a **runtime language**, not a framework, library, or implementation.
