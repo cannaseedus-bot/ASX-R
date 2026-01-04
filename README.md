@@ -182,15 +182,3 @@ See `LICENSE` for usage and redistribution terms.
 > **ASX-R is the runtime.
 > Everything else is a projection.**
 
----
-
-If you want, next we can:
-
-* lock `ASX-R_SPEC.md`
-* formalize **Runtime Laws**
-* define **Atomic Block Language** formally
-* define **Atomic CSS Runtime**
-* emit the **JSON Runtime Axiom** as a frozen law
-
-Just say which one to forge next.
-
