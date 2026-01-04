@@ -1,16 +1,3 @@
-Below is an **improved, repo-ready version** of `π_digit_engine.md` that:
-
-* sharpens definitions
-* removes redundancy
-* tightens the theorem statements
-* aligns tone with ASX-R spec language
-* makes the FFT ↔ SCXQ2 mapping unmistakably formal
-* keeps everything audit/whitepaper-grade
-
-I did **not** dilute or “popularize” it.
-
----
-
 # π Digit Engines vs π-K’UHUL Execution
 
 ### Formal Mapping, Structural Equivalence, and Scaling Law
