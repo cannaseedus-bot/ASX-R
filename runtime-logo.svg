@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="ASX-R logo">
+  <defs>
+    <!-- Dark neon-ish gradient (still looks good on light backgrounds) -->
+    <linearGradient id="g" x1="64" y1="64" x2="448" y2="448" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#55F6FF"/>
+      <stop offset="0.45" stop-color="#7C5CFF"/>
+      <stop offset="1" stop-color="#FF4FD8"/>
+    </linearGradient>
+
+    <!-- Soft glow -->
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feColorMatrix in="b" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 0.8 0" result="c"/>
+      <feMerge>
+        <feMergeNode in="c"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Inner shadow for the frame -->
+    <filter id="inner" x="-30%" y="-30%" width="160%" height="160%">
+      <feOffset dx="0" dy="2"/>
+      <feGaussianBlur stdDeviation="4" result="o"/>
+      <feComposite in="o" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="insh"/>
+      <feColorMatrix in="insh" type="matrix"
+        values="0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0.55 0"/>
+      <feComposite in2="SourceGraphic" operator="over"/>
+    </filter>
+
+    <!-- Subtle grid pattern -->
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#FFFFFF" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background plate -->
+  <rect x="44" y="44" width="424" height="424" rx="64" fill="#070A12"/>
+  <rect x="44" y="44" width="424" height="424" rx="64" fill="url(#grid)"/>
+
+  <!-- Outer frame -->
+  <rect x="56" y="56" width="400" height="400" rx="56"
+        fill="none" stroke="url(#g)" stroke-width="10" filter="url(#glow)"/>
+
+  <!-- Inner frame -->
+  <rect x="76" y="76" width="360" height="360" rx="44"
+        fill="none" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="2" filter="url(#inner)"/>
+
+  <!-- Atomic block motif (3 blocks + 1 anchor) -->
+  <!-- Anchor ring (runtime law / determinism) -->
+  <circle cx="256" cy="256" r="118" fill="none" stroke="url(#g)" stroke-width="10" stroke-linecap="round" filter="url(#glow)"/>
+  <circle cx="256" cy="256" r="96"  fill="none" stroke="#FFFFFF" stroke-opacity="0.10" stroke-width="2"/>
+
+  <!-- “Blocks” (structure) -->
+  <g filter="url(#glow)">
+    <rect x="166" y="172" width="86" height="86" rx="18" fill="none" stroke="url(#g)" stroke-width="8"/>
+    <rect x="260" y="172" width="86" height="86" rx="18" fill="none" stroke="url(#g)" stroke-width="8"/>
+    <rect x="166" y="266" width="86" height="86" rx="18" fill="none" stroke="url(#g)" stroke-width="8"/>
+  </g>
+
+  <!-- Binding lines (block ↔ projection) -->
+  <g stroke="#FFFFFF" stroke-opacity="0.20" stroke-width="3" stroke-linecap="round">
+    <path d="M252 215 H260"/>
+    <path d="M209 258 V266"/>
+    <path d="M252 309 H260" stroke-opacity="0.10"/>
+  </g>
+
+  <!-- ASX-R mark -->
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif"
+     text-anchor="middle" fill="#EAF0FF">
+    <text x="256" y="408" font-size="44" font-weight="800" letter-spacing="2" opacity="0.92">ASX-R</text>
+    <text x="256" y="438" font-size="14" font-weight="600" letter-spacing="3" opacity="0.55">RUNTIME LANGUAGE</text>
+  </g>
+
+  <!-- Small corner “tick” (monotonic time) -->
+  <path d="M394 120 L420 120 L420 146" fill="none" stroke="url(#g)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+</svg>
