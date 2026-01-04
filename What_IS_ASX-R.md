@@ -1,9 +1,3 @@
-Good — this is exactly the right moment to do this **from scratch**, because you’re not reorganizing an app or a spec dump, you’re publishing a **runtime language**.
-
-I’ll be very direct and very concrete.
-
----
-
 # What ASX-R *is* (and what the repo must reflect)
 
 **ASX-R is not:**
