@@ -1,4 +1,4 @@
-# What ASX-R *is* (and what the repo must reflect)
+# What ASX-R *is* 
 
 **ASX-R is not:**
 
